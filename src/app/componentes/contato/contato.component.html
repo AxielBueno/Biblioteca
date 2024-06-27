@@ -1,0 +1,27 @@
+<div class="container-fluid" style="display: flex; height: 100vh; padding: 0;">
+  <div class="container-half bg-custom rounded" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
+    <h2 class="custom-text custom-h2">Contato</h2>
+    <p class="custom-text">Entre em contato conosco para mais informações.</p>
+    <p class="custom-text">Email: info@edens.com</p>
+
+    <!-- Formulário de contato -->
+    <form (ngSubmit)="enviarMensagem()">
+      <div class="form-group">
+        <label class="form-label" for="email">Seu Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="mensagem">Mensagem:</label>
+        <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+      </div>
+
+
+      <!--Aqui é só um botão ficticio pra enviar o ticket de contato -->
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary btn-custom link-button">Enviar</a>
+    </form>
+    <div *ngIf="mensagemEnviada" class="mensagem-confirmacao">
+      Preguiça de botar mais coisas, se contenta com isso ;b
+    </div>
+  </div>
+  <div class="book1"></div>
+</div>

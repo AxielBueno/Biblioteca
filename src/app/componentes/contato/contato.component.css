@@ -1,0 +1,52 @@
+body{
+  background-color: #493D36;
+}
+
+.book1{
+  width: 50%;
+  background-image: url('src/app/image/book1.jpg');
+  background-size: cover;
+}
+
+.container-half {
+  width: 50%;
+}
+.bg-custom {
+  background-color: #a68069;
+}
+
+.custom-text{
+  text-align: center;
+}
+
+.form-label {
+  display: inline-block;
+  width: 90px;
+  margin-left: 30px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: calc(100% - 60px);
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.btn-custom{
+  background-color: #2B2928;
+  border: none;
+  margin-top: 10px;
+  margin-right: 30px;
+  float: right;
+}
+
+.btn-custom:active{
+  background-color: #504B49;
+}
+
+.mensagem-confirmacao {
+  text-align: center;
+  font-weight: bold;
+}
+

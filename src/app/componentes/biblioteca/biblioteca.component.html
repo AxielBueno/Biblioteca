@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+      <div class="library-container">
+
+        <!-- Aqui tem os text fields para conseguir subir pro banco as informações
+         tipo Nome, Autor e Descrição. -->
+
+
+        <h2>Cadastrar Livro</h2>
+        <form (ngSubmit)="cadastrarLivro()">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="novoLivro.nome" required>
+          </div>
+          <div class="form-group">
+            <label for="autor">Autor:</label>
+            <input type="text" class="form-control" id="autor" name="autor" [(ngModel)]="novoLivro.autor" required>
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <textarea class="form-control" id="descricao" name="descricao" [(ngModel)]="novoLivro.descricao"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-custom" [disabled]="!novoLivro.nome || !novoLivro.autor">Cadastrar</button>
+        </form>
+
+        <!-- Aqui mostrarei o livros cadastrados!! -->
+
+        <h2>Livros Cadastrados</h2>
+
+        <div class="livros-container">
+          <div class="caixas-container">
+            <div *ngFor="let livro of livros" class="livro-box d-flex justify-content-between align-items-center">
+              <span><strong>{{ livro.nome }}</strong> Por: {{ livro.autor }}</span>
+
+              <!-- 3 Botões, um para Deletar do banco, outro para ver a descrição, e um para editar
+               as informações no banco -->
+
+              <div class="btn-group">
+                <button class="btn btn-danger btn-custom ml-2" (click)="detalhesLivro(livro)">Detalhes</button>
+                <button class="btn btn-danger btn-custom ml-2" (click)="editarLivro(livro)">Editar</button>
+                <button class="btn btn-danger btn-custom ml-2" (click)="deletarLivro(livro)">Deletar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Essa é uma box que fica responsavel por apresentar a descrição
+Tive que fazer na base de muita pesquisa, pq n tava conseguindo solo :b -->
+<div class="modal" [class.show]="showModalDetalhes">
+  <div class="modal-content">
+    <button class="close" (click)="fecharModalDetalhes()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+      </svg>
+    </button>
+    <h2 class="modal-title">Detalhes do Livro</h2>
+    <div class="description-box">
+      <p class="descricao">{{ livroSelecionado.desc }}</p>
+    </div>
+  </div>
+</div>
+
+<!--Uma box especifica para as edições -->
+<div class="modal" [class.show]="showModalEdicao">
+  <div class="modal-content">
+    <button class="close" (click)="fecharModalEdicao()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+      </svg>
+    </button>
+    <h2 class="modal-title">Editar Livro</h2>
+    <div class="edit-box">
+      <div class="form-group">
+        <label for="nomeEdit">Nome:</label>
+        <input type="text" class="form-control" id="nomeEdit" name="nomeEdit" [(ngModel)]="livroSelecionado.nome" required>
+      </div>
+      <div class="form-group">
+        <label for="autorEdit">Autor:</label>
+        <input type="text" class="form-control" id="autorEdit" name="autorEdit" [(ngModel)]="livroSelecionado.autor" required>
+      </div>
+      <div class="form-group">
+        <label for="descricaoEdit">Descrição:</label>
+        <textarea class="form-control" id="descricaoEdit" name="descricaoEdit" [(ngModel)]="livroSelecionado.desc"></textarea>
+      </div>
+      <button class="btn btn-primary btn-custom" (click)="salvarEdicao()">Salvar</button>
+    </div>
+  </div>
+</div>

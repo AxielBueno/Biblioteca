@@ -1,0 +1,51 @@
+body{
+  background-color: #493D36;
+}
+
+.book1{
+  width: 50%;
+  background-image: url('src/app/image/book1.jpg');
+  background-size: cover;
+
+}
+
+.container-half {
+  width: 50%;
+}
+.bg-custom {
+  background-color: #a68069;
+}
+.custom-text {
+  color: #2B2928;
+  text-align: center;
+}
+.custom-h1 {
+  margin-bottom: 70px;
+  text-align: center;
+}
+.custom-h2 {
+  margin-bottom: 30px;
+  margin-top: 70px;
+
+}
+
+.cdt{
+  text-align: center;
+  margin-top: 70px;
+}
+
+.btn-cadastrar {
+  margin-left: 45%;
+  background-color: #2B2928;
+  border: none;
+}
+
+
+
+.btn-cadastrar:hover{
+  background-color: #504B49;
+}
+
+.anuncio{
+  text-align: center;
+}
