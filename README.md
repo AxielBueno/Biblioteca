@@ -1,27 +1,28 @@
-# Trabalho1
+# Biblioteca Online
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
-## Development server
+Este projeto procura apresentar uma database que manipula dados relacionados a livros, no atual momento, o projeto
+apresenta apenas o sistema de CRUD com os livros, mas no futuro, este mesmo irá criar estatisticas a armazenar 
+informações mais detalhadas sobre os livros, em busca de poder apresentar dados relevantes aos úsuarios.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Componentes & Services
 
-## Code scaffolding
+### Farei uma breve descrição de cada componente e services:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Home
+Este componente, será utilizado como "rosto" da página, sendo o primeiro a ser apresetando ao abrir o projeto.
+No mesmo está sendo apresentado breves informações ilustrativas sobre a página. Nela está presente um botão "Cadastrar"
+que lhe redireciona para a página principal (Biblioteca) do projeto que será abordada mais a frente.
 
-## Build
+O botão cadastrar redireciona por meio do Routerlink.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Header
+### Footer
+### Biblioteca
+### Contato
 
-## Running unit tests
+### Services
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
