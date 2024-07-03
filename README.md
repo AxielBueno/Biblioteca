@@ -7,6 +7,10 @@ apresenta apenas o sistema de CRUD dos livros, mas no futuro, se o projeto conti
 este mesmo irá criar estatisticas e armazenar informações mais detalhadas sobre os livros, 
 em busca de poder apresentar dados relevantes aos úsuarios.
 
+# Usuario Alvo
+
+Em suma o público alvo são pessoas que buscam por registras os livros em sua posse ou livros que já leram, em busca de terem uma database acerca dos livros.
+
 # Componentes básicos
 
 ### Farei uma breve descrição de cada componente básico:
@@ -114,4 +118,6 @@ Service que acessa o banco de dados e deleta algum objeto livro criado.
 # Model
 O Model possui apenas 1 classe, sendo ela a classe Livro, como atributos a classe possui o id, nome, autor e desc.
 
+# Desafios e Soluções
 
+No fim, este projeto como um todo até certo ponto foi desafiador, devido ao fraco conhecimento de orientado a objetos que e tive na cadeira do TI em POO, mas durantes as aulas de Web e principalmente durante este projeto, consegui ir criando mais noção de como desenvolver um código "melhor" e acredito que eu possa melhorar e entender muito mais nos meus próximos projetos.
