@@ -62,28 +62,40 @@ Após o úsuario realizar o registro do seu livro, será criado uma caixa na ár
 
 ### Funções da Biblioteca
 **carregarLivros()**
+
 Esta função utiliza o service *buscarLivro*, pegando todos objetos livros e é utilizada para carregar todos livros selecionados.
 
 **cadastrarLivros()**
+
 Basicamente recebe o nome, autor e uma descrição*, e efetivamente esses atributos são colocados a um objeto livro que será salvado no banco de dados, após isto a função *carregarLivros* é chamada.
 (Esta função faz uso do Service adicionarLivro)
 
 *descrição não sendo obrigatória.
 
 **deletarLivro()**
+
 Uma função responsavel por deletar o livro selecionado pelo Id.
 (Ela faz uso do *removerLivro*)
 
 **detalhesLivro()**
 
+Ele utiliza a funcão *livroSelecionado* que armazena o livro em questão, e logo após isto identifica o modal como true, resultando em uma box que irá apresentar a descrição do livro escolhido.
+
 **fecharModal()**
+
+Função utilizada para o botão de fechar do modal, ao clicar no botão X do modal, o set do modal se tornará false, fechando o mesmo.
 
 **editarLivro()**
 
+Basicamente ela serve para abrir o Modal de edição do livro selecionado.
+
 **fecharModalEdicao()**
+
+Mesma função do *fecharModal*, serve para o botão X tornar o modal false.
 
 **salvarEdicao()**
 
+Uma função linkada ao botão Salvar do modal de edição que busca registrar a alteração feita no objeto livro, retornando no console se foi efetuado com sucesso ou não e por fim fechando o modal.
 
 
 # Services
@@ -92,13 +104,13 @@ Cada um destes services vai ser chamado em biblioteca e receberam suas devidas a
 ### adicionarLivro
 Este service busca criar um objeto livro dentro do banco de dados, primeiro ele cria o objeto, se der certo, o sistema indica que foi um sucesso, caso contrario será avisado um ERRO ao tentar subir para o banco o objeto.
 ### atualizarLivro
-Neste caso busco alterar os dados de um livro já criado no banco de dados, neste caso eu quis fazer uso do observable, então no inicio do código eu abro ele com o observable (Responsavel por gerenciar acontecimentos assincronos e também retornar sucesso ou erro)
+Neste caso busco alterar os dados de um livro já criado no banco de dados, neste caso eu quis fazer uso do observable, então no inicio do código eu abro ele com o observable (Responsavel por gerenciar acontecimentos assincronos e também retornar sucesso ou erro).
 ### buscarLivro
-O buscarLivro busca de modo geral todos objetos livros
+O buscarLivro busca de modo geral todos objetos livros.
 ### buscarLivroPorId
-O buscarLivroPorId diferente do anterior, especifica um livro especifico na busca baseado no Id
+O buscarLivroPorId diferente do anterior, especifica um livro especifico na busca baseado no Id.
 ### removerLivro
-Service que acessa o banco de dados e deleta algum objeto livro criado
+Service que acessa o banco de dados e deleta algum objeto livro criado.
 # Model
 O Model possui apenas 1 classe, sendo ela a classe Livro, como atributos a classe possui o id, nome, autor e desc.
 
